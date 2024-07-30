@@ -12,12 +12,12 @@ const UserProfile = ({image, name}:Props) => {
     <Link href={'/app'}>
       <div className="mx-auto relative size-12">
         {image?
-            <Image src={image} alt={image} className='rounded-full object-cover' fill={true} priority={true} sizes='100%' />
+            <Image src={image} alt={image} className='w-full h-full rounded-full object-cover' fill={true} priority={true} sizes='100%' />
             :
             <FaCircleUser className='w-full h-full text-slate-600' />
         }
       </div>
-      <h1 className='text-center text-sm text-slate-700 font-semibold'>{name}</h1>
+      <h1 className='text-center text-lg text-slate-700 font-extrabold'>{name}</h1>
     </Link>
   )
 }

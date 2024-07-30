@@ -1,9 +1,12 @@
-import React from 'react'
+import { getAllTasksActions } from '@/actions/task.actions'
+import DisplayAllPost, { sleep } from '@/components/app/DisplayAllPost'
 
-const page = () => {
+const page = async() => {
+  await sleep()
+  const tasks=await getAllTasksActions({important:true}) as Task[]
   return (
-    <div>
-      
+    <div className='flex-1 h-full'>
+          <DisplayAllPost tasks={tasks} />
     </div>
   )
 }
