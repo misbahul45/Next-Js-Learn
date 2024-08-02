@@ -9,7 +9,7 @@ import { FaGithub, FaGoogle } from 'react-icons/fa6'
 
 const page = async() => {
     const session=await auth()
-  if (session?.user) return redirect('/app')
+  if (session?.user) return redirect('/app ')
   return (
     <main>
       <Header />
