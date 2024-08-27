@@ -117,7 +117,7 @@ const FormPost = ({ userId }: Props) => {
       <div className="flex gap-2 items-center justify-end">
         <button type='button' onClick={() => { toggleForm() }} className='w-28 py-2 rounded-md bg-red-600 text-slate-100 shadow-lg shadow-slate-800/50 hover:bg-red-800 transition-all duration-100'>Cancel</button>
         <button type='submit' className='w-48 flex gap-2 justify-center items-center py-2 bg-cyan-600 text-slate-100 rounded-md shadow-lg shadow-slate-800/50 hover:bg-cyan-800 transition-all duration-100'>
-          <span>Create Task</span>
+          <span>{taskUpdate.id?"Update":"Create"}</span>
           <FaPlus />
         </button>
       </div>
